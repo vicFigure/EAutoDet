@@ -1,5 +1,5 @@
 # EAutoDet
-Implementation of EAutoDet[], an efficient NAS method for Object Detection. Code is developed based on [YOLOV5](https://github.com/ultralytics/yolov5)
+Implementation of [EAutoDet](), an efficient NAS method for Object Detection. Code is developed based on [YOLOV5](https://github.com/ultralytics/yolov5)
 
 # Environment
 
