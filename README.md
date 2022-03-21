@@ -1,26 +1,26 @@
 # EAutoDet
-Implementation of EAutoDet[], an efficient NAS method for Object Detection. Code is developed based on YOLOV5[https://github.com/ultralytics/yolov5]
+Implementation of EAutoDet[], an efficient NAS method for Object Detection. Code is developed based on [YOLOV5](https://github.com/ultralytics/yolov5)
 
 # Environment
 
-The environment of this project is the same as YOLOv5[https://github.com/ultralytics/yolov5]. Also, you can build a singularity image by:
+The environment of this project is the same as [YOLOv5](https://github.com/ultralytics/yolov5). Also, you can build a singularity image by:
 
 `singularity build <name/of/image>.sig envs/singularity.def`
 
 # Performance
 
-We define four search spaces, denoted as EAutoDet-s (small), EAutoDet-m (mediun), EAutoDet-l (large), and EAutoDet-x (extra-large). We also train YOLOv5 from scratch and compare with our discovered models. FPS are evaluated on the (Darkne platform)[https://github.com/pjreddie/darknet], which is written in C and CUDA.
+We define four search spaces, denoted as EAutoDet-s (small), EAutoDet-m (mediun), EAutoDet-l (large), and EAutoDet-x (extra-large). We also train YOLOv5 from scratch and compare with our discovered models. FPS are evaluated on the [Darknet platform](https://github.com/pjreddie/darknet), which is written in C and CUDA.
 
 | Model         | mAP(0.5:0.95) | Params (M) | FPS |
 | ------------------ |---------- |----------- |----|
-| YOLOv5-s   |     |    36.9     | 7.3 |113|
-| YOLOv5-m   |     |    43.9     | 21.4 |88|
-| YOLOv5-l   |     |    46.8     | 47.1 |59|
-| YOLOv5-x   |     |    49.1     | 87.8 |43|
-| EAutoDet-s   |     |    40.1     | 9.1 |120|
-| EAutoDet-m   |   45.2  |    28.1     |70|
-| EAutoDet-l   |   47.9  |    34.4     |59|
-| EAutoDet-x   |   49.2  |    86.0     |41
+| YOLOv5-s   |   36.9     | 7.3      |113|
+| YOLOv5-m   |   43.9     | 21.4     |88|
+| YOLOv5-l   |   46.8     | 47.1     |59|
+| YOLOv5-x   |   49.1     | 87.8     |43|
+| EAutoDet-s   |   40.1   | 9.1      |120|
+| EAutoDet-m   |   45.2   | 28.1     |70|
+| EAutoDet-l   |   47.9   | 34.4     |59|
+| EAutoDet-x   |   49.2   | 86.0     |41
 
 # Quick Start
 ## How to search an architecture
@@ -50,7 +50,7 @@ You can the following codes to test on the test set of COCO:
 
 `bash scripts/eval.sh 0`
 
-Then you can submit the results (json file) to (COCO evaluation website)[https://competitions.codalab.org/competitions/20794#learn_the_details]
+Then you can submit the results (json file) to [COCO evaluation website](https://competitions.codalab.org/competitions/20794#learn_the_details)
 
 ## How to evaluate FPS
 You can change the discovered architecture configuration (yaml file) to Darknet configuration and then test on Darknet platform, the codes are coming soon.
