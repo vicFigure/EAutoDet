@@ -57,26 +57,16 @@ You can change the discovered architecture configuration (yaml file) to Darknet 
 
 
 # Citations
-`
+<pre><code>
 @article{EAutoDet,
-
   author    = {Xiaoxing Wang and
-
                Jiale Lin and
-
                Junchi Yan and
-
                Juanping Zhao and
-
                Xiaokang Yang},
-
   title     = {EAutoDet: Efficient Architecture Search for Object Detection},
-
   journal   = {CoRR},
-
   volume    = {abs/2203.10747},
-
   year      = {2022},
-
 }
-`
+</code></pre>`
