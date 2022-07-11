@@ -28,25 +28,25 @@ You can search an EAutoDet-s on the 0-th GPU for 50 epochs by running the follow
 
 `bash scripts/search.sh 0`
 
-If you want to search on other spaces, you can change the value of `cfg_file` in `scripts/bash.sh` an run the above codes.
+If you want to search on other spaces, you can change the value of `cfg_file` in `scripts/bash.sh` and run the above code.
 
-If you want to search with a large batch size on multiple GPUs, ruu the following codes:
+If you want to search with a large batch size on multiple GPUs, run the following code to search on 4 GPUs:
 
 `bash scripts/search.sh 0 1 2 3`
 
 ## How to train the discovered architecture
-After searching, the code will save the genotype of discovered architectures in the directory `runs/train-$ID/exp/genotypes/`, where $ID is the timestamp of your search process. Then you can evluate the discovered architecture by training the discovered architecture for 300 epochs from scratch. Run the following codes to train on a single GPU.
+After searching, the code will save the genotype of discovered architectures in the directory `runs/train-$ID/exp/genotypes/`, where $ID is the timestamp of your search process. Then you can evluate the discovered architecture by training the discovered architecture for 300 epochs from scratch. Run the following code to train on a single GPU.
 
 `bash scritps/full_train.sh 0`
 
-Notice that before running the above codes, you should change `ID` as the timestamp of your search process.
+Notice that before running the above code, you should change `$ID` in `scripts/full_train.sh` as the timestamp of your search process.
 
-If you want to train with a large batch sizei on multiple GPUs, run the following codes:
+If you want to train with a large batch sizei on multiple GPUs, run the following code to train on 4 GPUs:
 
 `bash scripts/full_train.sh 0 1 2 3`
 
 ## How to evaluate the trained model
-You can the following codes to test on the test set of COCO:
+You can the following code to test on the test set of COCO:
 
 `bash scripts/eval.sh 0`
 
@@ -57,4 +57,16 @@ You can change the discovered architecture configuration (yaml file) to Darknet 
 
 
 # Citations
-
+`
+@article{EAutoDet,
+  author    = {Xiaoxing Wang and
+               Jiale Lin and
+               Junchi Yan and
+               Juanping Zhao and
+               Xiaokang Yang},
+  title     = {EAutoDet: Efficient Architecture Search for Object Detection},
+  journal   = {CoRR},
+  volume    = {abs/2203.10747},
+  year      = {2022},
+}
+`
