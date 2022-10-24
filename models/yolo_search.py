@@ -269,7 +269,7 @@ class Model(nn.Module):
                tmp[3][1] = k
 #               tmp[3].insert(2, d)
                tmp[3][2] = d # originally, tmp[3][2] is candidate_e, which is useless for full-train
-               if tmp[2] in ['Bottlenect']:
+               if tmp[2] in ['Bottleneck']:
                  if isinstance(tmp[3][-1], dict): tmp[3][-1]['e_bottleneck'] = e
                  else: tmp[3].append({'e_bottleneck':e})
                else: tmp[3][0] = Cout * e 
